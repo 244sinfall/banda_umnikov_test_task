@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import PrimeVue from 'primevue/config';
-import {createRouter, createWebHistory} from 'vue-router';
+import {createRouter, createWebHashHistory} from 'vue-router';
 import 'primevue/resources/themes/lara-light-indigo/theme.css';
 import 'primeicons/primeicons.css';
 import ToastService from 'primevue/toastservice';
@@ -21,7 +21,7 @@ const router = new createRouter({
         name: 'cafe',
         component: CafePage
     }],
-    history: createWebHistory()
+    history: createWebHashHistory()
 })
 const store = createStore({
     state () {
