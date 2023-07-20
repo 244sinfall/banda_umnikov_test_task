@@ -16,7 +16,7 @@ const props =defineProps({
       <div class="col-12 sm:col-6 lg:col-12 xl:col-4 p-2">
         <div class="p-4 border-1 surface-border surface-card border-round">
           <div class="flex flex-wrap align-items-center justify-content-between gap-2">
-            <div class="flex align-items-center gap-2">
+            <div v-if="cafe.data.time && cafe.data.distance" class="flex align-items-center gap-2">
               <i class="pi pi-clock"></i>
               <span class="font-semibold">{{ `${getTime(cafe.data.time)} (${getDistance(cafe.data.distance)})` }}</span>
             </div>
